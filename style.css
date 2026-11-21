@@ -1,0 +1,28 @@
+@font-face { font-family: "DSEG7"; src: url("fonts/DSEG7Classic-Light.woff2") format("woff2"); font-weight: 300; font-display: swap; }
+@font-face { font-family: "DSEG7"; src: url("fonts/DSEG7Classic-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "DSEG7"; src: url("fonts/DSEG7Classic-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #000; color: #eee; font: 14px system-ui, sans-serif; overflow: hidden; }
+  #bar { position: fixed; inset: 0 0 auto 0; z-index: 10; display: flex; gap: 10px; align-items: center;
+         flex-wrap: wrap; padding: 8px 12px; background: #141414; border-bottom: 1px solid #333; }
+  #bar.hide { display: none; }
+  button, input, select, label { font: inherit; }
+  button { padding: 5px 12px; background: #2a2a2a; color: #eee; border: 1px solid #444; border-radius: 6px; cursor: pointer; }
+  button:hover { background: #363636; }
+  input[type=text], input[type=color] { width: 90px; padding: 4px 6px; background: #1e1e1e; color: #eee; border: 1px solid #444; border-radius: 6px; }
+  #stage { position: fixed; inset: 0; background: #000; }
+  .box { position: absolute; }
+  #timerBox { z-index: 1; display: flex; align-items: center; justify-content: center; }
+  #frameBox { z-index: 2; }
+  #frameBox img { width: 100%; height: 100%; object-fit: contain; -webkit-user-drag: none; }
+  #time { font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; white-space: nowrap;
+          font-family: "DSEG7", "Courier New", monospace; }
+  .active { outline: 1px dashed #4af; cursor: grab; }
+  .active:active { cursor: grabbing; }
+  .inactive { pointer-events: none; }
+  .grip { position: absolute; right: -6px; bottom: -6px; width: 22px; height: 22px; background: #4af;
+          border-radius: 4px; cursor: nwse-resize; }
+  .active .grip:active { cursor: nwse-resize; }
+  .box.inactive .grip { display: none; }
+  #hint { position: fixed; bottom: 6px; left: 8px; z-index: 10; color: #666; font-size: 12px; }
