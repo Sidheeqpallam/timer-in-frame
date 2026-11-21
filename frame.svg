@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e27a"/>
+      <stop offset=".35" stop-color="#b8860b"/>
+      <stop offset=".6" stop-color="#fff3b0"/>
+      <stop offset="1" stop-color="#8a6508"/>
+    </linearGradient>
+    <mask id="hole">
+      <rect width="800" height="600" fill="#fff"/>
+      <rect x="90" y="90" width="620" height="420" rx="10" fill="#000"/>
+    </mask>
+  </defs>
+  <!-- outer frame body, centre cut out so the timer shows through -->
+  <g mask="url(#hole)">
+    <rect x="10" y="10" width="780" height="580" rx="18" fill="url(#g)"/>
+    <rect x="34" y="34" width="732" height="532" rx="12" fill="none" stroke="#5c4406" stroke-width="3"/>
+    <rect x="72" y="72" width="656" height="456" rx="10" fill="none" stroke="#5c4406" stroke-width="4"/>
+  </g>
+  <g fill="url(#g)" stroke="#5c4406" stroke-width="2">
+    <circle cx="90" cy="90" r="18"/><circle cx="710" cy="90" r="18"/>
+    <circle cx="90" cy="510" r="18"/><circle cx="710" cy="510" r="18"/>
+    <rect x="370" y="2" width="60" height="26" rx="13"/>
+    <rect x="370" y="572" width="60" height="26" rx="13"/>
+  </g>
+</svg>
