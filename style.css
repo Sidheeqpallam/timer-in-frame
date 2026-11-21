@@ -7,6 +7,8 @@
   #bar { position: fixed; inset: 0 0 auto 0; z-index: 10; display: flex; gap: 10px; align-items: center;
          flex-wrap: wrap; padding: 8px 12px; background: #141414; border-bottom: 1px solid #333; }
   #bar.hide { display: none; }
+  #repo { display: flex; color: #888; margin-left: auto; }
+  #repo:hover { color: #eee; }
   button, input, select, label { font: inherit; }
   button { padding: 5px 12px; background: #2a2a2a; color: #eee; border: 1px solid #444; border-radius: 6px; cursor: pointer; }
   button:hover { background: #363636; }
